@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Wiki</title>
+</head>
+<body>
+
+    <form id="create-form" method="GET" action="/addPage/add">
+        <button>Create Page</button>
+    </form>
+
+        <h2>Pages:</h2>
+        <ul class="pages">
+            <% array.forEach((name) => { %>
+                <li><a href= <%= '/' + name %> ><%= name %></a></li>
+            <% }); %>
+        </ul>
+
+    
+</body>
+
+
+</html>

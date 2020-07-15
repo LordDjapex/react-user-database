@@ -1,0 +1,24 @@
+app.get('/:pagename', async (req, res) => {
+    const pagename = req.params.pagename
+    console.log(pagename)
+    const page = await contentModel.findOne({'name': pagename}, (err, object) => {
+        if (err) {
+            return err;
+        }
+
+        return object;
+    })
+    console.log(page.content)
+})
+
+
+db.collection('pages').find((err, object) => {
+    if (err) {
+        console.log(err)
+        return;
+    }
+
+    object.forEach((doc) => {
+        console.log(doc.name)
+    })
+})

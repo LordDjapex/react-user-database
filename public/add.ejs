@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+    <title>My wiki</title>
+</head>
+<body>
+    <header>
+        <div>
+            <p>My Wiki</p>
+        </div>
+    </header>
+
+    <form method="POST" action="/addPage/redirect">
+        <label>Page name:</label>
+        <input type="text" name="pagename" placeholder="page name" required>
+        <textarea id="content-area" name="contentarea" rows="4" cols="50" required></textarea>
+        <button type="submit">submit</button>
+    </form>
+
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+</body>
